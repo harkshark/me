@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gallery</title>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans">
+	<link rel="stylesheet" href="../fun/foundation/6/css/foundation.css">
+	<link rel="stylesheet" href="../fun/masonry/foundation-masonry.css">
+	<link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body>
+
+	<div class="row columns">
+		<h1>Gallery, a jQuery Plugin</h1>
+
+		<div class="l-gallery">
+
+			<div class="study">
+				<div class="thumb"><img src="//placehold.it/269x228/00B1C2/222&text=Alpha" alt="USACE ROE Dashboard" id="GEOINT_ROE" /></div>
+				<div class="caption"><h6>ROE Dashboard</h6><h3 class="subheader italics">USACE</h3></div>
+			</div>
+			<div class="study">
+				<div class="thumb"><img src="//placehold.it/269x228/00B1C2/222&text=Beta" alt="NIFC Fire EGP" id="GEOINT_NIFC" /></div>
+				<div class="caption"><h6>Fire EGP</h6><h3 class="subheader italics">NIFC</h3></div>
+			</div>
+			<div class="study">
+				<div class="thumb"><img src="//placehold.it/269x228/00B1C2/222&text=Charlie" alt="NSTA Screenshot" id="NSTA" /></div>
+				<div class="caption"><h6>Mobile Conference<br/>Dashboard</h6><h3 class="subheader italics">NSTA</h3></div>
+			</div>
+			<div class="study">
+				<div class="thumb"><img src="//placehold.it/269x228/00B1C2/222&text=Delta" alt="USACE Screenshot" id="USACE_ARRA" /></div>
+				<div class="caption"><h6>Data Management and<br/>Reporting</h6><h3 class="subheader caps italics">USACE</h3></div>
+			</div>
+			<div class="study">
+				<div class="thumb"><img src="//placehold.it/269x228/00B1C2/222&text=Echo" alt="Google Maps Engine" id="GME"></div>
+				<div class="caption"><h6>Google Maps Engine</h6><h3 class="subheader caps italics">Federal</h3></div>
+			</div>
+			<div class="study">
+				<div class="thumb"><img src="//placehold.it/269x228/00B1C2/222&text=Foxtrot" alt="U.S. Courts" id="USCourts"></div>
+				<div class="caption"><h6>Google Maps API</h6><h3 class="subheader caps italics">U.S. Courts</h3></div>
+			</div>
+
+		</div><!--//end .l-gallery -->
+
+	</div><!--//end .row.columns -->
+
+	
+
+	<script src="../fun/foundation/6/js/vendor/jquery.min.js"></script>
+	<script src="../fun/foundation/6/js/vendor/what-input.min.js"></script>
+	<script src="../fun/foundation/6/js/foundation.min.js"></script>
+	<script src="../fun/gallery/gallery.js"></script>
+
+	<script>
+	$(document).ready(function($){
+		$('.l-gallery').gallery({
+			numToDisplay: 4,
+			studyPadding: 25,
+			containToGrid: false,
+			//navEasing: 'easeOutBounce',
+			hoverEasing: 'easeInOutBack',
+			hoverCaptions: true,
+			onStudyClick: function(){ window.open( $(this).find('img').attr('id') + '.aspx' ,'_blank');	}
+		});
+	});
+	</script>
+
+</body>
+</html>

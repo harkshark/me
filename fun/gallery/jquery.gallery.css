@@ -1,0 +1,77 @@
+/* -----------------------------------------
+   Case Study Gallery Plugin
+   NTC / Lauren Harkness
+   November 2013
+----------------------------------------- */
+
+/* Container ---------------------------- */
+.l-gallery {
+	/*border:1px solid magenta;*/
+	box-sizing:border-box;
+	min-height:150px;
+	position:relative;
+	/*width:720px;*/
+}
+
+/* Study Item --------------------------- */
+.l-gallery .study {
+	/*border:1px solid lime;*/
+	box-sizing:border-box;
+	cursor:pointer;
+	display:none;
+	float:left;
+	position:relative;
+}
+
+.l-gallery#sm-gallery .thumb {
+	filter:grayscale(100%);
+	-webkit-filter:grayscale(100%);
+	filter:gray;
+	-webkit-transition:all .6s ease;
+	filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	opacity:0.7;
+}
+
+.l-gallery#sm-gallery .thumb.active,
+.l-gallery#sm-gallery .thumb:hover {
+	opacity:1;
+	filter:grayscale(0%);
+	-webkit-filter:grayscale(0%);
+	filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+}
+
+.l-gallery#sm-gallery .thumb.active {
+	box-shadow:0 0 10px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Caption ------------------------------ */
+.l-gallery .study .caption {
+	background-color:#F2F2F2;
+	/*border:1px solid #D9D9D9;*/
+	border-top:10px solid #000;
+	bottom:-1px;
+	display:none;
+	/*font-size:16px;*/
+	/*font-weight:bold;*/
+	height:65%;
+	/*line-height:47px;*/
+	opacity:0.9;
+	overflow:hidden;
+	padding:6px 16px 6px;
+	position:absolute;
+	/*text-align:center;*/
+	text-transform:uppercase;
+	width:inherit;
+}
+
+/* Navigation --------------------------- */
+.l-gallery .nav { cursor:pointer; }
+.l-gallery .nav.expand { position:absolute; }
+
+.l-gallery .nav.expand.left { left:-40px; }
+.l-gallery .nav.expand.right { right:-40px; }
+
+.l-gallery .nav img {
+	height:60px;
+	width:40px;
+}
