@@ -1,0 +1,40 @@
+/* -----------------------------------------
+   My Styles
+   github.com/harkshark/me
+   MIT License
+   By Lauren Harkness
+----------------------------------------- */
+
+/* TOC ----------------------------------
+:: Masonry
+:: 
+----------------------------------------- */
+
+
+/* Typography --------------------------- */
+
+body * { font-family:'PT Sans', sans-serif; }
+
+
+/* Masonry ------------------------------ */
+
+.masonry-house a { color:inherit; }
+
+.brick { padding:6px 12px; position:relative; }
+
+.brick.h100 { height:100px; }
+.brick.h250 { height:250px; }
+
+.brick.pink { background-color:#EC5879; }
+.brick.green { background-color:#A1D433; }
+
+.brick.caps { text-transform:uppercase; }
+.brick.center * { text-align:center; }
+.brick.link { cursor:pointer; }
+.masonry-brick a img:hover { box-shadow:0 0 6px 1px RGBA(95, 95, 95, 0.5); }
+
+.brick.pink.link:hover { box-shadow:0 0 6px 1px RGBA(236, 88, 121, 0.5); }
+.brick.green.link:hover { box-shadow:0 0 6px 1px RGBA(161, 212, 51, 0.5); }
+.brick.blue.link:hover { box-shadow:0 0 6px 1px RGBA(0, 177, 194, 0.5); }
+
+.brick .action { bottom:6px; position:absolute; right:12px; }
