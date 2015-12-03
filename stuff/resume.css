@@ -25,8 +25,6 @@ body { font-family:"Roboto Slab", sans-serif; font-size:2em; font-weight:300; po
 
 h1, h2, h3, h4, h5, h6 { font-family:"Open Sans", sans-serif; font-weight:100; margin:0; }
 
-img { max-width:200px; }
-
 
 /* Navbar ------------------------------- */
 
@@ -77,6 +75,16 @@ header .navbar-default .navbar-nav .active a:hover { background:transparent; col
 @media only screen and (min-width:450px) and (max-width:768px){ 
 	.service p { padding:0 20%; }
 }
+
+#staff { background-image:linear-gradient(to bottom, #E4D29D, #CDAE50); }
+
+.doctor { margin:10px 0; }
+
+.doctor h3 { color:#6F4E36; font-size:1.2em; font-weight:600; padding-bottom:5px; }
+
+.doctor p { font-size:.8em; }
+
+.doctor img { width:100%; }
 
 
 /* Footer ------------------------------- */
