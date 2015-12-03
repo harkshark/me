@@ -86,6 +86,37 @@ header .navbar-default .navbar-nav .active a:hover { background:transparent; col
 
 .doctor img { width:100%; }
 
+#testimonials { padding:0; }
+
+#testimonials h2 { display:none; }
+
+#testimonials blockquote { border-left:none; margin:0; min-height:500px; padding:0; position:relative; }
+
+#testimonials blockquote .quote { background-color:rgba(255,255,255, .6); border-radius:0 50px 0 0 ; bottom:0; font-weight:400; padding:20px 5%; position:absolute; width:75%; }
+
+#testimonials blockquote .quote:hover { background-color:rgba(239,240,196, .9); }
+
+#testimonials #janeh { background:url(images/testimonial-janeh.jpg) no-repeat center; background-size:cover;}
+
+#testimonials #mcphersons { background:url(images/testimonial-mcphersons.jpg) no-repeat center; background-size:cover;}
+
+#testimonials #johnb { background:url(images/testimonial-johnb.jpg) no-repeat center; background-size:cover;}
+
+#testimonials #lorraines { background:url(images/testimonial-lorraines.jpg) no-repeat center; background-size:cover;}
+
+#testimonials .quote { font-size:1.2em; font-weight:400; line-height:110%; }
+
+#testimonials .quote .more,
+#testimonials .quote .customer { font-size:0; line-height:0; opacity:0; padding-top:10px; }
+
+#testimonials .quote:hover .more { display:block; font-family:"Open Sans", sans-serif; font-size:.8em; font-weight:100; line-height:120%; opacity:1; }
+
+#testimonials .quote:hover .customer { display:block; font-size:.7em; text-align:right; }
+
+#testimonials .quote .intro:after { content:"..."; }
+
+#testimonials .quote:hover .intro:after { content:""; }
+
 
 /* Footer ------------------------------- */
 
