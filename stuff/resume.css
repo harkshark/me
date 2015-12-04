@@ -9,7 +9,6 @@
 :: Navbar
 :: Carousel
 :: Views
-:: 
 :: Footer
 ----------------------------------------- */
 
@@ -28,7 +27,7 @@ h1, h2, h3, h4, h5, h6 { font-family:"Open Sans", sans-serif; font-weight:100; m
 
 /* Navbar ------------------------------- */
 
-header .navbar { padding:30px 0; }
+header .navbar { padding:30px 0; transition:all .5s ease-out; }
 
 header .navbar-toggle { background-color:#279182; }
 
@@ -52,10 +51,37 @@ header .navbar-default .navbar-nav a:hover { color:#EEC856; }
 header .navbar-default .navbar-nav .active a { background:transparent; border-bottom:4px solid #EEC856; color:#EEC856; font-weight:700; text-shadow:none; }
 header .navbar-default .navbar-nav .active a:hover { background:transparent; color:#E15D5F; text-shadow:none; }
 
+header .inbody { background:rgba(104,73,49, .9); }
+
+header .navbar.inbody { padding-bottom:0; padding-top:0; }
+
+header .navbar.inbody .navbar-nav { padding-top:10px; }
+
+header .inbody .navbar-brand { background-size:43px; background-position:top left; margin-left:10px; margin-top:5px; padding-bottom:0; }
+
+header .inbody .navbar-brand h1 { font-size:1.1em; padding-left:38px; }
+
+header .inbody .navbar-brand h1:after { content:"Harkness"; }
+
+header .inbody .navbar-brand span.subhead { display:none; }
+
 
 /* Carousel ----------------------------- */
 
+.carousel.fade { opacity:1; }
 
+.carousel.fade .item { display:block; left:0; opacity:0; position:absolute; top:0; transition:opacity ease-out .7s; width:100%; }
+
+.carousel.fade .item:first-child { opacity:0; position:relative; top:auto; }
+
+.carousel.fade .item.active { opacity:1; }
+
+.carousel-control { opacity:0; }
+
+.carousel-control.right,
+.carousel-control.left { background-image:none; }
+
+#featured .item { background-position:center center; background-repeat:no-repeat; background-size:cover; height:100%; width:100%; }
 
 
 /* Views -------------------------------- */
@@ -96,13 +122,13 @@ header .navbar-default .navbar-nav .active a:hover { background:transparent; col
 
 #testimonials blockquote .quote:hover { background-color:rgba(239,240,196, .9); }
 
-#testimonials #janeh { background:url(images/testimonial-janeh.jpg) no-repeat center; background-size:cover;}
+#testimonials #janeh { background:url(images/testimonial-janeh.jpg) no-repeat center center; background-size:cover;}
 
-#testimonials #mcphersons { background:url(images/testimonial-mcphersons.jpg) no-repeat center; background-size:cover;}
+#testimonials #mcphersons { background:url(images/testimonial-mcphersons.jpg) no-repeat center center; background-size:cover;}
 
-#testimonials #johnb { background:url(images/testimonial-johnb.jpg) no-repeat center; background-size:cover;}
+#testimonials #johnb { background:url(images/testimonial-johnb.jpg) no-repeat center center; background-size:cover;}
 
-#testimonials #lorraines { background:url(images/testimonial-lorraines.jpg) no-repeat center; background-size:cover;}
+#testimonials #lorraines { background:url(images/testimonial-lorraines.jpg) no-repeat center center; background-size:cover;}
 
 #testimonials .quote { font-size:1.2em; font-weight:400; line-height:110%; }
 
@@ -120,4 +146,15 @@ header .navbar-default .navbar-nav .active a:hover { background:transparent; col
 
 /* Footer ------------------------------- */
 
-footer .navbar-default { background-color:transparent; }
+footer { background:#586D74; color:white; font-size:.8em; padding:20px 0 40px 0; }
+
+footer a { color:#E0E6AE; }
+footer a:hover { color:#EEC856 !important; }
+
+footer .phone { color:#E0E6AE; font-size:1.4em; font-weight:700; }
+
+footer .navbar { margin-bottom:0; min-height:0; }
+
+footer .navbar-default { background-color:transparent; border:none; margin-right:40px; }
+
+footer .navbar-nav > li a { color:#EEC856 !important; padding-bottom:0; padding-top:0; text-decoration:underline; }
