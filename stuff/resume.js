@@ -14,10 +14,13 @@ $(function(){
 
 	"use strict";
 
+	var topOffset = 50,		// navbar height
+		numSlides = $('#featured .item').length,
+		randomSlide = Math.floor(Math.random()*numSlides),
+		winHeight = $(window).height();
+
 
 	/* Scrollspy ------------------------ */
-
-	var topOffset = 50;		// navbar height
 
 	$('body').scrollspy({
 		target: 'header .navbar',
@@ -66,9 +69,6 @@ $(function(){
 
 
 	// count slide items and add thumbnails
-	var numSlides = $('#featured .item').length;
-	var randomSlide = Math.floor(Math.random()*numSlides);
-
 	for (var i=0; i<numSlides; i++){
 
 		var markup = '<li data-target="#featured" data-slide-to="' + i + '"';
@@ -86,8 +86,6 @@ $(function(){
 
 
 	// convert images to background-images for full window display
-	var winHeight = $(window).height();
-
 	$('.fullheight').css('height', winHeight);
 
 	$('#featured .item img').each(function(){
